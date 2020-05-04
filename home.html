@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home Page</title>
+  <script src="main.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:900|Work+Sans:300" rel="stylesheet">
+</head>
+
+<body id="lite-blue">
+
+<div id="mobile">
+  <div class="dropdown" id="mobile">
+    <button onclick="dropDown()" class="dropbtn" id="mobile">MENU</button>
+    <div id="myDropdown" class="dropdown-content" id="mobile">
+      <a href ="#title-blockm" id="mobile">Welcome</a>
+      <a href ="#sec1m" id="mobile">Section 1</a>
+      <a href ="#sec2m" id="mobile">Section 2</a>
+      <a href ="#sec3m" id="mobile">Section 3</a>
+      <a href ="#sec4m" id="mobile">Section 4</a>
+      <a href ="#sec5m" id="mobile">Section 5</a>
+      <a href="logout.html" id="mobile">Log Out</a>
+    </div>
+  </div>
+
+  <div id="text-container">
+    <div id="title-blockm">
+      <h2> Phishing Attacks and 2FA:</br>Moving Towards a More Secure Authentication Infrastructure </h2>
+
+      <p class="writeupm">
+          In today’s modern world, Cyber Security is an ever-growing field that is constantly evolving. The proliferation of ways to share and store information online has created a veritable gold mine for cyber attacks and malicious activity. One of the newest and most popular developments in the cyber security field is two-factor authentication for password protection. In this study, we conducted interviews, sent out a survey to the Wesleyan community, and did some practical examination into two factor authentication.
+      </p>
+
+    </div>
+
+    <div class="sec-container" id="sec1m">
+      <img id="data-pic" src="data-1.png"></img>
+    </div>
+
+    <div class="sec-container" id="sec2m">
+      <p class="writeupm">
+          One of the primary types of cyber-attacks on the modern web is a phishing attack. Phishing is a type of social engineering attack, often used to steal login passwords, or credit card details. For our purposes, we will be discussing phishing attacks that are designed to glean login passwords, as this will allow us to discuss more fundamental issues with current methodologies for authenticating users. One of the most common phishing attacks are spoof emails. For instance, someone would receive an email stating that there is something wrong with their account, and that they should follow the attached link and log in. The link would lead to a fake login page, and when the victim logged in with their username and password, it would be recorded so that the attacker could use it to access the account at their leisure. There are countless variations on this attack but that is a general example, and we believe that it shows the problem with the traditional login structure. A stolen password means a stolen account.
+      </p>
+    </div>
+
+    <div class="sec-container" id="sec3m">
+      <p class="writeupm">
+          Before moving on to our experimental findings, it is important to establish exactly what two factor authentication is. When one normally logs in to an online service, they are only required to enter a username (or email) and a password. This is considered single factor authentication. The problem with this, is that passwords are generally unreliable. People are tempted to use short passwords that they can easily remember, re-use passwords between sites, and write down passwords in places that may not be secure. All of these present vulnerabilities for information stored on password protected sites. One way to fight against this is to enforce strict password protocols (the National Institute of Standards and Technology have recently released a new set of such protocols). What we propose to be, and what we believe has shown to be, a better solution is to move towards multi factor authentication. This would mean that in order to log in with a given username, the user would be required to not only insert their password but also provide some secondary form of proof of account ownership. Some examples of a second factor are: a code provided through text/email/an app, some form of biometric data (fingerprint/face scan), a magnetic stripe card, etc. Requiring a password and one of these would be considered two factor authentication, which is what most sites have been moving towards. However, sites that require even more protection, most notably government sites, are moving towards three or more factors for authentication.
+      </p>
+    </div>
+
+    <div class="sec-container" id="sec4m">
+      <p class="writeupm">
+          The first step in our process towards understanding two-factor authentication was to conduct an interview with Wesleyan’s CIO (Chief Information Officer), Joseph Bazaely. He described his job as “keeping Wesleyan out of the press.” This includes making sure that no sensitive information is leaked through electronic means. He let us know that Wesleyan is currently undergoing a process of integrating a two-factor login and walked us through a lot of the steps that make up that process. Essentially, there are three options for integrating institution wide multi factor authentication. The first option is to build your own system. Generally, this is not done, as it requires a lot of coding hours, and as we have discussed in class, it is rarely worth it to reinvent the wheel for security. As with encryption, It is better to try and use established and safe practices and products than make something yourself that could have unknown work arounds. The preferred approach for institutions is to purchase the service from one of two market leaders: Duo Authentication, or Microsoft Authentication. Based on our discussion and research, companies choose Microsoft if they are already integrated with other Microsoft products such as Teams and Outlook etc., otherwise Duo is the go to choice. Wesleyan will be using Duo Authentication for their 2FA service.
+      </p>
+    </div>
+
+    <div class="sec-container" id ="sec5m">
+      <p class="writeupm">
+          It was made clear to us that there are a lot of costs behind 2FA that might not be expected by the average user. We will discuss some of them with Duo as the model. First of all you have to buy a license, allowing your institution to register a certain number of accounts with the Duo service. The costs don’t stop there however. If you want to use text messages to deliver the codes to users, there is a cost of a couple cents for each time a code is sent. This may seem small at first, but with several thousand users all signing in several times a day, some of which incurring an extra cost for being international numbers, it can add up to a significant amount of capital. The solution to this is to not allow text messages, and require the second factor to be a code provided through the Duo app. This has its own issue however, as It requires a smartphone, which not all members of the institution may own. In this case you can provide physical cards to those members of your institution that will generate a code whenever needed, but those aren’t free either.
+      </p>
+    </div>
+
+  </div>
+</div>
+
+<div id="desktop">
+  <div id="color-block-left">
+
+        <h2 id="top-sec"> <a class="sec-scroll" href="#title-block"> Welcome </a> </h2>
+
+        <h2 class="sections"> <a class="sec-scroll" href ="#sec1"> Section 1 </a> </h2>
+        <h2 class="sections"> <a class="sec-scroll" href ="#sec2"> Section 2 </a>  </h2>
+        <h2 class="sections"> <a class="sec-scroll" href ="#sec3"> Section 3 </a>  </h2>
+        <h2 class="sections"> <a class="sec-scroll" href ="#sec4"> Section 4 </a>  </h2>
+        <h2 class="sections"> <a class="sec-scroll" href ="#sec5"> Section 5 </a>  </h2>
+
+        <h2 class="sections"><a class="sec-scroll" id="log-out" href="logout.html">Log out</a></h2>
+
+  </div>
+
+  <div id="content-block-right">
+      <div id="text-container">
+        <div id="title-block">
+          <h2> Phishing Attacks and 2FA:</br>Moving Towards a More Secure Authentication Infrastructure </h2>
+
+          <p class="writeup">
+              In today’s modern world, Cyber Security is an ever-growing field that is constantly evolving. The proliferation of ways to share and store information online has created a veritable gold mine for cyber attacks and malicious activity. One of the newest and most popular developments in the cyber security field is two-factor authentication for password protection. In this study, we conducted interviews, sent out a survey to the Wesleyan community, and did some practical examination into two factor authentication.
+          </p>
+
+        </div>
+
+        <div class="sec-container" id="sec1">
+          <img src="data-1.png"></img>
+        </div>
+
+        <div class="sec-container" id="sec2">
+          <p class="writeup">
+              One of the primary types of cyber-attacks on the modern web is a phishing attack. Phishing is a type of social engineering attack, often used to steal login passwords, or credit card details. For our purposes, we will be discussing phishing attacks that are designed to glean login passwords, as this will allow us to discuss more fundamental issues with current methodologies for authenticating users. One of the most common phishing attacks are spoof emails. For instance, someone would receive an email stating that there is something wrong with their account, and that they should follow the attached link and log in. The link would lead to a fake login page, and when the victim logged in with their username and password, it would be recorded so that the attacker could use it to access the account at their leisure. There are countless variations on this attack but that is a general example, and we believe that it shows the problem with the traditional login structure. A stolen password means a stolen account.
+          </p>
+        </div>
+
+        <div class="sec-container" id="sec3">
+          <p class="writeup">
+              Before moving on to our experimental findings, it is important to establish exactly what two factor authentication is. When one normally logs in to an online service, they are only required to enter a username (or email) and a password. This is considered single factor authentication. The problem with this, is that passwords are generally unreliable. People are tempted to use short passwords that they can easily remember, re-use passwords between sites, and write down passwords in places that may not be secure. All of these present vulnerabilities for information stored on password protected sites. One way to fight against this is to enforce strict password protocols (the National Institute of Standards and Technology have recently released a new set of such protocols). What we propose to be, and what we believe has shown to be, a better solution is to move towards multi factor authentication. This would mean that in order to log in with a given username, the user would be required to not only insert their password but also provide some secondary form of proof of account ownership. Some examples of a second factor are: a code provided through text/email/an app, some form of biometric data (fingerprint/face scan), a magnetic stripe card, etc. Requiring a password and one of these would be considered two factor authentication, which is what most sites have been moving towards. However, sites that require even more protection, most notably government sites, are moving towards three or more factors for authentication.
+          </p>
+        </div>
+
+        <div class="sec-container" id="sec4">
+          <p class="writeup">
+              The first step in our process towards understanding two-factor authentication was to conduct an interview with Wesleyan’s CIO (Chief Information Officer), Joseph Bazaely. He described his job as “keeping Wesleyan out of the press.” This includes making sure that no sensitive information is leaked through electronic means. He let us know that Wesleyan is currently undergoing a process of integrating a two-factor login and walked us through a lot of the steps that make up that process. Essentially, there are three options for integrating institution wide multi factor authentication. The first option is to build your own system. Generally, this is not done, as it requires a lot of coding hours, and as we have discussed in class, it is rarely worth it to reinvent the wheel for security. As with encryption, It is better to try and use established and safe practices and products than make something yourself that could have unknown work arounds. The preferred approach for institutions is to purchase the service from one of two market leaders: Duo Authentication, or Microsoft Authentication. Based on our discussion and research, companies choose Microsoft if they are already integrated with other Microsoft products such as Teams and Outlook etc., otherwise Duo is the go to choice. Wesleyan will be using Duo Authentication for their 2FA service.
+          </p>
+        </div>
+
+        <div class="sec-container" id ="sec5">
+          <p class="writeup">
+              It was made clear to us that there are a lot of costs behind 2FA that might not be expected by the average user. We will discuss some of them with Duo as the model. First of all you have to buy a license, allowing your institution to register a certain number of accounts with the Duo service. The costs don’t stop there however. If you want to use text messages to deliver the codes to users, there is a cost of a couple cents for each time a code is sent. This may seem small at first, but with several thousand users all signing in several times a day, some of which incurring an extra cost for being international numbers, it can add up to a significant amount of capital. The solution to this is to not allow text messages, and require the second factor to be a code provided through the Duo app. This has its own issue however, as It requires a smartphone, which not all members of the institution may own. In this case you can provide physical cards to those members of your institution that will generate a code whenever needed, but those aren’t free either.
+          </p>
+        </div>
+
+    </div>
+  </div>
+</div>
+</body>
+</head>

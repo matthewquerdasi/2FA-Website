@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>QR Code</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:900|Work+Sans:300" rel="stylesheet">
+</head>
+
+<body id="comp-back">
+
+  <div id="login-box">
+
+    <h2> Scan QR code </h2>
+
+    <img src="<?php echo $qrCodeUrl ?>" />
+
+    <!-- QR code validation form -->
+    <form method="post">
+
+      <p>
+        <label> Authenticator code: </label>
+        <input type="text" id="auth_code" name="auth_code" placeholder="******" required />
+      </p>
+
+      <p>
+        <button type="button" value="Submit" name="btn-code-submit" id="btn-code-submit">Submit</button>
+      </p>
+
+      <p> Having trouble? Return to <a class="log-swap" href="logout.php"> login </a></p>
+
+    </form>
+
+    <p id="response"></p>
+  </div>
+
+</body>
+</head>
