@@ -17,7 +17,8 @@
 
 
     // getting PHP Gangsta open source google authenticator //
-    require "GoogleAuthenticator.php";
+    require "libs/GoogleAuthenticator.php";
+    //require "GoogleAuthenticator.php";
 
     // initalizing authenticator //
     $authenticator = new PHPGangsta_GoogleAuthenticator();
@@ -32,53 +33,61 @@
 
     // getting 6 digit code //
     $code = $authenticator->getCode($secret);
-    echo $code;
 
-
-    // checking QR generated code vs. local 6 digit code //
-    /*
-    $checkResult = $authenticator->verifyCode($secret, $code, 2);    // 2 = 2*30sec clock tolerance
-    if ($checkResult) {
-        echo 'OK';
-    } else {
-        echo 'FAILED';
-    }
-    */
 
 ?>
-
 
 
 <!DOCTYPE html>
 <html>
 <head>
-  <title>QR Code</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <!-- Google analytics tracking tag -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158867952-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-158867952-1');
+  </script>
+
+  <!-- title and styling -->
+  <title id="welcome-instruction">QR Code</title>
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+
+  <!-- favicon -->
+  <link rel="icon" href="https://matthewquerdasi.com/2fa/images/2FA-favicon.jpg" type="image/jpg">
 </head>
 
-<body>
+<body id="comp-back">
 
-  <h2> Scan QR code </h2>
+  <div id="login-box">
 
-  <img src="<?php echo $qrCodeUrl ?>" />
+    <h2> Scan QR code with Google Authenticator app</h2>
 
-  <!-- QR code validation form -->
-  <form method="post">
+    <img src="<?php echo $qrCodeUrl ?>" />
 
-    <p>
-      <label> Authenticator code: </label>
-      <input type="text" id="auth_code" name="auth_code" placeholder="******" required />
-    </p>
+    <!-- QR code validation form -->
+    <form method="post">
 
-    <p>
-      <button type="button" value="Submit" name="btn-code-submit" id="btn-code-submit">Submit</button>
-    </p>
+      <p>
+        <label> Authenticator code: </label>
+        <input type="text" id="auth_code" name="auth_code" placeholder="******" required />
+      </p>
 
-    <p> Having trouble? Return to <a href="logout.php"> login </a></p>
+      <p>
+        <button type="button" value="Submit" name="btn-code-submit" id="btn-code-submit">Submit</button>
+      </p>
 
-  </form>
+      <p> Having trouble? Return to <a class="log-swap" href="logout.php"> login </a></p>
 
-  <p id="response"></p>
+    </form>
+
+    <p id="response"></p>
+
+
 
 
   <!-- jquery scripting -->
@@ -124,6 +133,8 @@
           })
       });
   </script>
+
+  </div>
 
 </body>
 </head>

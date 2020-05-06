@@ -17,7 +17,7 @@
 
 
     // getting PHP Gangsta authenticator //
-    require "GoogleAuthenticator.php";
+    require "libs/GoogleAuthenticator.php";
 
     // initalizing authenticator //
     $authenticator = new PHPGangsta_GoogleAuthenticator();
@@ -36,7 +36,7 @@
 
       } else {
           $_SESSION['loggedIN'] = '1';
-          // exit message to be received by AJAX // 
+          // exit message to be received by AJAX //
           exit('NOT A BINGO');
       }
     }
